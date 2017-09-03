@@ -1,0 +1,29 @@
+<div class="row">
+  <mz-input-container class="col s7">
+    <input mz-input #inp
+    [label]="'Dar vuelta al numero'"
+    [validate]="true"
+    [dataError]="'Mal tu pusiste el limite... ----------------->'"
+    id="input"
+    length=" {{numDigitos}} "
+    type="number"
+    >
+  </mz-input-container>
+  <mz-input-container class="col s5">
+      <input mz-input #lim (keyup)="cambio(lim.value)" (focus)="focus(lim)" (blur)="blurs(lim)"
+      [label]="'Di el numero de digitos'"
+      [validate]="true"
+      [dataError]="'No pasa de 5'"
+      id="input"
+      length="5"
+      type="number">
+  </mz-input-container>
+  <button mz-button class="col s2 push-s10"  style="margin-top: 20px" (click)="voltearNumero(inp.value)">
+    Voltear
+  </button>
+  <div class="row">
+    <div class="col s12 center-align" style="font-size: 36px; margin-top: 12px; background-color: rgba(24, 223, 226, 0.58);" >
+        {{numeroVolteado}}
+    </div>
+  </div>
+</div>
