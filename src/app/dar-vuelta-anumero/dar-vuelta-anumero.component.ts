@@ -7,6 +7,7 @@ import { Component, OnInit} from '@angular/core';
 })
 export class DarVueltaANumeroComponent implements OnInit {
   numeroVolteado: number;
+  //cantidad de digitos
   numDigitos: number;
 
 
@@ -21,13 +22,17 @@ export class DarVueltaANumeroComponent implements OnInit {
   focus( foco: HTMLInputElement ) { foco.style.backgroundColor = 'rgba(63, 255, 10, 0.27)'; }
   blurs(blu: HTMLInputElement ) { blu.style.backgroundColor = ''; }
 
-  voltearNumero(valor: any) {
-    let ab: number = this.numDigitos;
-    this.numeroVolteado = 0;
-    for (let i = 0; i < this.numDigitos; i++) {
-      ab -= 1;
-      const aux: number = ((valor % Math.pow(10, ab)) / Math.pow(10, i)) * Math.pow(10, ab);
-      this.numeroVolteado = aux + this.numeroVolteado;
+  voltear(val:number){
+    this.numeroVolteado=this.voltearNumero(val);
+  }
+
+  voltearNumero(numero: number):number {
+    let cantidad:number = this.numDigitos;
+    let nuevoNum:number = 0;
+    for (var i = 0; i < cantidad; i++) {
+      nuevoNum=nuevoNum*10+numero%10;
+      numero=Math.trunc(numero/10);
     }
+    return nuevoNum;
   }
 }
