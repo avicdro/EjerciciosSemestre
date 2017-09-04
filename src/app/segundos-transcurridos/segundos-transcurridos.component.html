@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="row" style="font-size: 36px; ">
+    <div class="col s11  push-s1">
+      Segundos transcurridos en el dia
+    </div>
+  </div>
+  <mz-input-container class="col s12 m7">
+    <input mz-input #inp
+    [label]="'Da la hora y los minutos hh:mm'"
+    [validate]="true"
+    [dataError]="'Llena el campo'"
+    id="input"
+    length=" 5 "
+    type="text"
+    >
+  </mz-input-container>
+  <mz-select-container class="col s12 m5">
+    <select mz-select *ngIf="doceHora === false" 
+      id="options-select"
+      [label]="'Label'"
+      [placeholder]="'Que tipo de hora'"
+    >
+      <optgroup label="Tipo">
+        <option data-icon="assets/select-icon-1.jpg" class="left circle">De 24 horas </option>
+        <option data-icon="assets/select-icon-1.jpg" class="left circle" (click)="doceHoras()" >De 12 horas con AM y PM </option>
+      </optgroup>
+    </select>
+    <select mz-select *ngIf="doceHora ===  true" 
+    id="options-select"
+    [label]="'Label'"
+    [placeholder]="'Que tipo de hora'"
+  >
+      <option data-icon="assets/select-icon-1.jpg" class="left circle" (click)="doceHoras()">Cambiar Tipo</option>
+      <optgroup label="Tipo">
+      <option data-icon="assets/select-icon-1.jpg" class="left circle">AM</option>
+      <option data-icon="assets/select-icon-1.jpg" class="left circle">PM</option>
+    </optgroup>
+  </select>
+  </mz-select-container>
+  <button mz-button class="col s5 m2 push-s7 push-m10"  style="margin-top: 20px" (click)="segundos(inp.value)">
+    Iniciar
+  </button>
+  <div class="row">
+    <div class="col s12 center-align" style="font-size: 36px; margin-top: 12px; background-color: rgba(24, 223, 226, 0.58);" >
+        {{numeroSegundos}}
+    </div>
+  </div>
+</div>

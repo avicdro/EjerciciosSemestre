@@ -1,18 +1,18 @@
 <div class="row">
   <div class="row" style="font-size: 36px; ">
     <div class="col s11  push-s1">
-      Dar vuelta a un numero
+      Pasar de binario a decimal
     </div>
   </div>
   <mz-input-container class="col s12 m7">
-    <input mz-input #inp
-    [label]="'Dar vuelta al numero'"
-    [validate]="true"
-    [dataError]="'Mal tu pusiste el limite... ==============>'"
-    id="input"
-    length=" {{numDigitos}} "
-    type="number"
-    >
+  <input mz-input #inp
+  [label]="'Pasar numero binario a decimal'"
+  [validate]="true"
+  [dataError]="'Pusiste un numero que no es deimal o No son la cantidad de digitos ==============>'"
+  id="input"
+  length=" {{numDigitos}}"
+  type="number"
+  >
   </mz-input-container>
   <mz-input-container class="col s12 m5">
       <input mz-input #lim (keyup)="cambio(lim.value)" (focus)="focus(lim)" (blur)="blurs(lim)"
@@ -23,12 +23,12 @@
       length="5"
       type="number">
   </mz-input-container>
-  <button mz-button class="col s5 m2 push-s7 push-m10"  style="margin-top: 20px" (click)="voltear(inp.value)">
+  <button mz-button class="col s5 m2 push-s7 push-m10 "  style="margin-top: 20px" (click)="aDecimal(inp.value)">
     Iniciar
   </button>
   <div class="row">
     <div class="col s12 center-align" style="font-size: 36px; margin-top: 12px; background-color: rgba(24, 223, 226, 0.58);" >
-        {{numeroVolteado}}
+        {{numeroDecimal}}
     </div>
   </div>
 </div>

@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="row" style="font-size: 30px; ">
+    <div class="col s11  push-s1">
+      Calcular las raices con ecuaciones de 2do grado utilizando la resolvente
+    </div>
+  </div>
+  <mz-input-container class="col s12 m4">
+    <input mz-input #inp (focus)="focus(inp)" (blur)="blurs(inp)"
+    [label]="'Coeficiente A:'"
+    [validate]="true"
+    id="input"
+    length=" 10 "
+    type="number"
+    >
+  </mz-input-container>
+  <mz-input-container class="col s12 m4">
+      <input mz-input #lim  (focus)="focus(lim)" (blur)="blurs(lim)"
+      [label]="'Coeficiente B:'"
+      [validate]="true"
+      id="input"
+      length="10"
+      type="number">
+  </mz-input-container>
+  <mz-input-container class="col s12 m4">
+      <input mz-input #tres (focus)="focus(tres)" (blur)="blurs(tres)"
+      [label]="'Coeficiente C:'"
+      [validate]="true"
+      id="input"
+      length="10"
+      type="number">
+  </mz-input-container>
+  <div class="row">
+    <div class="col s10" *ngIf="VerComo === false">
+      <strong> Resolver la ecuación x2 - 9x + 8 = 0 </strong>
+      <ul>
+        <li>Los coeficientes son: a = 1 ; b = -9   y c = 8</li>
+        <li>Aplicando la fórmula resolvente x = (-B + (B**2 - 4*A*C)**(1/2))/2*A con los coeficientes que corresponden queda:</li> 
+      </ul>
+    </div>
+    <div class="col s2">
+      <a (click)="ver()" style="cursor: pointer">Ver Como</a>
+    </div>
+  </div>
+  <button mz-button class="col s5 m2 push-s7 push-m10"  style="margin-top: 20px" (click)="resolvente(inp.value, lim.value, tres.value)">
+    Iniciar
+  </button>
+  <div class="row">
+    <div class="col s12 " style="font-size: 36px; margin-top: 12px; background-color: rgba(24, 223, 226, 0.58);" >
+        Discriminante restando: {{numeroDisRestando}}
+    </div>
+    <div class="col s12 " style="font-size: 36px; margin-top: 12px; background-color: rgba(24, 223, 226, 0.58);" >
+        Discriminante sumando: {{numeroDisSumando}}
+    </div>
+  </div>
+</div>
