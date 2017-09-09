@@ -12,9 +12,11 @@ import { DarVueltaANumeroComponent } from './dar-vuelta-anumero/dar-vuelta-anume
 import { BinarioADecimalComponent } from './binario-adecimal/binario-adecimal.component';
 import { HipotenusaSegunCatetosComponent } from './hipotenusa-segun-catetos/hipotenusa-segun-catetos.component';
 import { VelocidadSegunDistanciaTiempoComponent } from './velocidad-segun-distancia-tiempo/velocidad-segun-distancia-tiempo.component';
-import { EcuacionesDeSegundoGradoResolventeComponent } from './ecuaciones-de-segundo-grado-resolvente/ecuaciones-de-segundo-grado-resolvente.component';
+import { EcuacionesResolventeComponent } from './ecuaciones-de-segundo-grado-resolvente/ecuaciones-de-segundo-grado-resolvente.component';
 import { EsCapicuaComponent } from './es-capicua/es-capicua.component';
 import { SegundosTranscurridosComponent } from './segundos-transcurridos/segundos-transcurridos.component';
+import { APagarEnEstacionamientoComponent } from './apagar-en-estacionamiento/apagar-en-estacionamiento.component';
+import { IntervaloComponent } from './intervalo/intervalo.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,11 @@ import { SegundosTranscurridosComponent } from './segundos-transcurridos/segundo
     BinarioADecimalComponent,
     HipotenusaSegunCatetosComponent,
     VelocidadSegunDistanciaTiempoComponent,
-    EcuacionesDeSegundoGradoResolventeComponent,
+    EcuacionesResolventeComponent,
     EsCapicuaComponent,
     SegundosTranscurridosComponent,
+    APagarEnEstacionamientoComponent,
+    IntervaloComponent,
   ],
   imports: [
     BrowserModule,

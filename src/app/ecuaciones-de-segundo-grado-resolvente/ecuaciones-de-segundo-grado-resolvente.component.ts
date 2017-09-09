@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ecuaciones-de-segundo-grado-resolvente.component.html',
   styleUrls: ['./ecuaciones-de-segundo-grado-resolvente.component.css']
 })
-export class EcuacionesDeSegundoGradoResolventeComponent implements OnInit {
+export class EcuacionesResolventeComponent implements OnInit {
 numeroDisRestando: number;
 numeroDisSumando: number;
 VerComo = true;

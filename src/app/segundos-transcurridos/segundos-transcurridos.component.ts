@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SegundosTranscurridosComponent implements OnInit {
   numeroSegundos: number;
-// cantidad de digitos
-  mañanaTarde: boolean;
-  doceHora = false;
-
 
   constructor() {
   }
@@ -19,7 +15,6 @@ export class SegundosTranscurridosComponent implements OnInit {
   ngOnInit() {
   }
 
-  doceHoras(): void { if (this.doceHora) {this.doceHora = false} else { this.doceHora = true}  console.log('"si funciona"')}
   focus( foco: HTMLInputElement ) { foco.style.backgroundColor = 'rgba(63, 255, 10, 0.27)'; }
   blurs(blu: HTMLInputElement ) { blu.style.backgroundColor = ''; }
 
